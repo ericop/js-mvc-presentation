@@ -1,230 +1,1134 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+    <title>JS MVC Smackdown: Angular 1.5, Ember, VueJS vs. Knockout</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A practical look JS MV* Frameworks: Angular 1.5, Ember, VueJS vs. Knockout, with or without components">
+    <meta name="author" content="EricOP">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/cmu.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    </script>
 
-		<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background="#b5533c" data-transition="zoom">
+                <h1>JS MVC Smackdown</h1>
+                <p>
+                    A practical look JS MV* Frameworks: Angular 1.5, Ember, VueJS vs. Knockout (with or without <a href="https://guides.emberjs.com/v1.13.0/components/">components</a>)
+                </p>
+                <br>
+                <p>
+                    <small>Created by <a href="https://github.com/ericop">EricOP</a></small>
+                </p>
+                <p>
+                    <code><small><em> press <strong>ESC</strong> to see the overall roadmap</em></small></code>
+                </p>
+            </section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+            <section data-background="http://i.giphy.com/7TVRvbWI6i8Du.gif">
+                <h3>Let the <a href="http://todomvc.com/"> JavaScript MVC</a> "SmackDown" Begin</h3>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+            </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+            <section data-background='#345642' data-background-transition="convex">
+                <h3>To Start With we had</h3>
+                <h4 class="fragment shrink">- Just ASP.NET w/ MVC -</h4>
+                <p class="fragment highlight-red">Knockout</p>
+                <p class="fragment"><strong>Now to Compare to:</strong></p>
+                <p class="fragment current-visible highlight-red"><em>ember</em></p>
+                <p class="fragment current-visible highlight-blue">Angular</p>
+                <p class="fragment current-visible highlight-green">VueJS</p>
+                <p class="fragment current-visible grow">With Components</p>
+                <p class="fragment">(more on <a href="https://guides.emberjs.com/v1.13.0/components/">components</a> later)</p>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+            </section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+            <!-- --------------------- START VERTICAL KNOCKOUT SECTION -------------------------- -->
+            <section data-transition="zoom">
+                <section>
+                    <h1><small>1. <a href="http://knockoutjs.com/">Knockout</a></small></h1>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- No Knockout app container needed-->
+<!-- HTML Form Template-->
+<form data-bind="submit: myModel.findMyEvents">
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+    <div class="row form-group">
+        <div class="col-md-6">
+            <label> First Name *</label>
+            <input class="form-control text-box single-line" data-bind="value: firstName">
+        </div>
+    </div>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+    <div class="row form-group">
+        <div class="col-md-6">
+            <label> Last Name *</label>
+            <input class="form-control text-box single-line" data-bind="value: lastName">
+        </div>
+    </div>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+    <div class="row form-group">
+        <div class="col-md-6">
+            <div class="col-md-offset-2">
+                <button type="submit" class="btn btn-maroon">
+                    Find My Registrations
+                </button>
+            </div>
+        </div>
+    </div>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+</form>
+					</code></pre></small>
+                    <p><code><small>Hold down <strong>Alt</strong> and <em>click</em> to zoom in and out on the slide</small></code></p>
+                </section>
+                <section>
+                    <h2><small>1. <a href="http://knockoutjs.com/">Knockout</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- HTML Checkbox -->
+<input type="checkbox" data-bind="checked: hideEventsWithMeals" /> <label>Hide Events with Meals</label>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+<table>
+<!-- HTML for loop -->
+<tbody data-bind="foreach: {data: myEvents, as: 'event' }">
+    <tr data-bind="if: !(myModel.hideEventsWithMeals() && event.hasMeal)">
+        <td>
+            <span data-bind="text: event.name"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.description"></span>
+        </td>
+        <td data-bind="css : {'bg-danger' : event.pastDate, 'text-danger' :  event.pastDate}">
+            <span data-bind="text: event.date"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.location"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.hasMeal"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.mealDescription"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.startTime"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.endTime"></span>
+        </td>
+        <td>
+            <span data-bind="text: event.pastDate"></span>
+            <a data-bind="attr: {href: event.urlId}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+        </td>
+    </tr>
+</tbody>
+</table>
+					</code></pre></small>
+                </section>
+                <section>
+                    <h2><small>1. <a href="http://knockoutjs.com/">Knockout</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+// JS Controller, Component, or ViewModel Bits
+var myModel = new function () {
+    var self = this;
+    self.hideEventsWithMeals = ko.observable(false);
+    self.firstName = ko.observable("Eric");
+    self.lastName = ko.observable("Johnson");
+    self.myEvents = ko.observableArray([]);
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+    self.addEvent = function (event) {
+        self.myEvents.push(
+            {
+                id: event.Id,
+                urlId: '/Admin/Details/' + event.Id,
+                name: event.Name,
+                description: event.Description,
+                location: event.Location,
+                date: event.Date,
+                startTime: event.StartTime,
+                endTime: event.EndTime,
+                hasMeal: event.HasMeal,
+                mealDescription: event.MealDescription,
+                pastDate: new Date(event.Date) < new Date()
+            })
+        console.log('event=', event);
+    }
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+    self.alert = function () {
+        alert("Hello, I'm " + self.firstName() + " " + self.lastName() + ", the stuff!");
+    };
+    self.findMyEvents = function () {
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
+        var that = self;
+        //clear old events
+        that.myEvents([]);
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+        $.ajax({
+            url: '@Url.Action("MyEventsAPI", "Home")',
+            dataType: 'json',
+            method: 'GET',
+            async: false,
+            data: { firstName: self.firstName(), lastName: self.lastName() },
+            success: function (data) {
+                var responseData = jQuery.parseJSON(data);
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+                for (i = 0; i < responseData.length; i++) {
+                    //console.log('for loop', i, responseData[i]);
+                    that.addEvent(responseData[i]);
+                }
+            }
+        });
+    }
+};
+// Knockout bind needed at end
+ko.applyBindings(myModel);
+					</code></pre></small>
+                </section>
+            </section>
+            <!-- --------------------- START VERTICAL EMBER SECTION -------------------------- -->
+            <section data-transition="zoom">
+                <section>
+                    <h1><small>2. <a href="http://emberjs.com/">Ember</a></small></h1>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+
+<!-- HTML Form Template-->
+<div id="myEvents"> <!-- //Ember needs an id div for the app container -->
+    <!--<script type="text/x-handlebars" // and handlebars templates are in Script tags-->
+    <form {{action 'findMyEvents'}}>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label> First Name *</label>
+                {{input class="form-control text-box single-line" value=firstName placeholder="first"}}
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label> Last Name *</label>
+                {{input class="form-control text-box single-line" value=lastName placeholder="last"}}
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <div class="col-md-offset-2">
+                    <button type="submit" class="btn btn-maroon">
+                        Find My Registrations
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+					</code></pre></small>
+                    <p><code><small>Hold down <strong>Alt</strong> and <em>click</em> to zoom in and out on the slide</small></code></p>
+                </section>
+                <section>
+                    <h2><small>2. <a href="http://emberjs.com/">Ember</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- HTML Checkbox -->
+{{input type="checkbox" name="hideEventsWithMeals" checked=hideEventsWithMeals}} <label>Hide Events with Meals</label>
+
+<table>
+<!-- HTML for loop -->
+    <tbody>
+        <!-- {{#if hideEventsWithMeals}} These HTMLBar sections aren't commented out in the actual code, -->
+        <!-- {{#each myEventsWithoutMeals as |event| }} syntax highlighter just is getting confused --> 
+        <tr>
+            <td>
+                <span>{{event.name}}</span>
+            </td>
+            <td>
+                <span>{{event.description}}</span>
+            </td>
+            <!--
+            <td class={{if event.pastDate "bg-danger text-danger"}}>
+                <span>{{event.date}}</span>
+            </td> -->
+            <td>
+                <span>{{event.location}}</span>
+            </td>
+            <td>
+                <span>{{event.hasMeal}}</span>
+            </td>
+            <td>
+                <span>{{event.mealDescription}}</span>
+            </td>
+            <td>
+                <span>{{event.startTime}}</span>
+            </td>
+            <td>
+                <span>{{event.endTime}}</span>
+            </td>
+            <td>
+                <a href="/Admin/Details/{{event.id}}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+            </td>
+        </tr>
+        <!-- {{/each}} -->
+        <!-- {{else}} -->
+        <!-- {{#each myEvents as |event| }} -->
+        <tr>
+            <td>
+                <span>{{event.name}}</span>
+            </td>
+            <td>
+                <span>{{event.description}}</span>
+            </td>
+            <!--  This section isn't commented out in the actual code, 
+                   but the HTMLBars highlighter is getting confused
+            <td class={{if event.pastDate "bg-danger text-danger"}}>
+                <span>{{event.date}}</span>
+            </td> -->
+            <td>
+                <span>{{event.location}}</span>
+            </td>
+            <td>
+                <span>{{event.hasMeal}}</span>
+            </td>
+            <td>
+                <span>{{event.mealDescription}}</span>
+            </td>
+            <td>
+                <span>{{event.startTime}}</span>
+            </td>
+            <td>
+                <span>{{event.endTime}}</span>
+            </td>
+            <td>
+                <a href="/Admin/Details/{{event.id}}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+            </td>
+        </tr>
+        <!-- {{/each}} -->
+        <!-- {{/if}} -->
+
+    </tbody>
+</table>
+					</code></pre></small>
+                </section>
+                <section>
+                    <h2><small>2. <a href="http://emberjs.com/">Ember</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+var myEventsApp = Ember.Application.create({
+    rootElement: '#myEvents',
+});
+
+myEventsApp.ApplicationController = Ember.Controller.extend({
+    firstName: "Eric",
+    lastName: "Johnson",
+    myEvents: [],
+    hideEventsWithMeals: false,
+    myEventsWithoutMeals: Ember.computed.filterBy('myEvents', 'hasMeal', false),
+
+    actions: {
+        alert: function () {
+            alert("Hello, I'm " + this.get('firstName') + " " + this.get('lastName') + ", the stuff!");
+        },
+        addEvent: function (event) {
+            this.myEvents.push(
+                {
+                    id: event.Id,
+                    //urlId: '/Admin/Details/' + event.Id, not needed
+                    name: event.Name,
+                    description: event.Description,
+                    location: event.Location,
+                    date: event.Date,
+                    startTime: event.StartTime,
+                    endTime: event.EndTime,
+                    hasMeal: event.HasMeal,
+                    mealDescription: event.MealDescription,
+                    pastDate: new Date(event.Date) < new Date(),
+                    hideThisMealEvent: event.hasMeal && this.get('hideEventsWithMeals')
+                })
+            console.log('event=', event);
+        },
+        findMyEvents: function () {
+
+            var that = this;
+            //clear old events
+            that.set('myEvents', []);
+
+            $.ajax({
+                url: '@Url.Action("MyEventsAPI", "Home")',
+                dataType: 'json',
+                method: 'GET',
+                async: false,
+                data: { firstName: that.get('firstName'), lastName: that.get('lastName') },
+                success: function (data) {
+                    var responseData = jQuery.parseJSON(data);
+
+                    for (i = 0; i < responseData.length; i++) {
+                        //console.log('for loop', i, responseData[i]);
+                        that.send('addEvent', responseData[i]);
+                    }
+                }
+            });
+        }
+    }
+})
+					</code></pre></small>
+                </section>
+            </section>
+
+            <!-- --------------------- START VERTICAL ANGULAR 1.5 SECTION -------------------------- -->
+            <section data-transition="zoom">
+                <section>
+                    <h1><small>3. <a href="https://angularjs.org/">Angular 1.5</a></small></h1>
+
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- HTML Form Template-->
+<div data-ng-app="myEvents">
+    <!-- "data-" at the start is optional -->
+    <div data-ng-controller="MyEventsController as Ctrl">
+
+        <form data-ng-submit="Ctrl.findMyEvents()">
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label> First Name *</label>
+                    <input class="form-control text-box single-line" data-ng-model="firstName" placeholder="first">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label> Last Name *</label>
+                    <input class="form-control text-box single-line" data-ng-model="lastName" placeholder="last">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <div class="col-md-offset-2">
+                        <button type="submit" class="btn btn-maroon">
+                            Find My Registrations
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+					</code></pre></small>
+                    <p><code><small>Hold down <strong>Alt</strong> and <em>click</em> to zoom in and out on the slide</small></code></p>
+                </section>
+                <section>
+                    <h2><small>3. <a href="https://angularjs.org/">Angular 1.5</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- HTML Checkbox -->
+<input type="checkbox" ng-model="hideEventsWithMeals" ng-init="checked=false" /> <label>Hide Events with Meals</label>
+
+<table>
+<!-- HTML for loop -->
+    <tr data-ng-repeat="event in myEvents" data-ng-if="!(hideEventsWithMeals && event.hasMeal)">
+        <td>
+            <span>{{event.name}}</span>
+        </td>
+        <td>
+            <span>{{event.description}}</span>
+        </td>
+        <td data-ng-class="{'bg-danger': event.pastDate, 'text-danger': event.pastDate}">
+            <span>{{event.date}}</span>
+        </td>
+        <td>
+            <span>{{event.location}}</span>
+        </td>
+        <td>
+            <span>{{event.hasMeal}}</span>
+        </td>
+        <td>
+            <span>{{event.mealDescription}}</span>
+        </td>
+        <td>
+            <span>{{event.startTime}}</span>
+        </td>
+        <td>
+            <span>{{event.endTime}}</span>
+        </td>
+        <td>
+            <a data-ng-href="/Admin/Details/{{event.id}}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+        </td>
+    </tr>
+</table>
+					</code></pre></small>
+                </section>
+                <section>
+                    <h2><small>3. <a href="https://angularjs.org/">Angular 1.5</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+// JS Controller, Component, or ViewModel Bits
+var myEventsApp = angular.module('myEvents', []);
+
+myEventsApp.controller('MyEventsController', function ($scope, $http) {
+    var self = this;
+
+    $scope.firstName = "Eric";
+    $scope.lastName = "Johnson";
+    $scope.myEvents = [];
+
+    self.alert = function () {
+        alert("Hello, I'm " + $scope.firstName + " " + $scope.lastName + ", the stuff!");
+    };
+
+    self.addEvent = function (event) {
+        $scope.myEvents.push(
+            {
+                id: event.Id,
+                //urlId: '/Admin/Details/' + event.Id, not needed
+                name: event.Name,
+                description: event.Description,
+                location: event.Location,
+                date: event.Date,
+                startTime: event.StartTime,
+                endTime: event.EndTime,
+                hasMeal: event.HasMeal,
+                mealDescription: event.MealDescription,
+                pastDate: new Date(event.Date) < new Date()
+            })
+        console.log('event=', event);
+    }
+
+    self.findMyEvents = function () {
+
+        var that = self;
+        //clear old events
+        $scope.myEvents = [];
+
+        $http({
+            url: '@Url.Action("MyEventsAPI", "Home")',
+            responseType: 'json',
+            method: 'GET',
+            async: false,
+            params: { firstName: $scope.firstName, lastName: $scope.lastName }
+        }).then(function (response) {
+            var responseData = angular.fromJson(response.data);
+
+            for (var i = 0; i < responseData.length; i++) {
+                //console.log('for loop', i, responseData[i]);
+                that.addEvent(responseData[i]);
+            }
+        });
+    }
+});
+					</code></pre></small>
+                </section>
+            </section>
+
+            <!-- --------------------- START VERTICAL VUE SECTION -------------------------- -->
+            <section data-transition="zoom">
+                <section>
+                    <h1><small>4. <a href="http://vuejs.org/">Vue.js</a></small></h1>
+
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<div id="myEvents"> <!-- Vue uses this id as the app container -->
+    <!-- Vue doesn't like "form" tag! Reloads the page if used -->
+    <div class="row form-group">
+        <div class="col-md-6">
+            <label> First Name *</label>
+            <input class="form-control text-box single-line" v-model="firstName" placeholder="first">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-6">
+            <label> Last Name *</label>
+            <input class="form-control text-box single-line" v-model="lastName" placeholder="last">
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-6">
+            <div class="col-md-offset-2">
+                <button v-on:click="findMyEvents" class="btn btn-maroon">
+                    Find My Registrations
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+					</code></pre></small>
+                    <p><code><small>Hold down <strong>Alt</strong> and <em>click</em> to zoom in and out on the slide</small></code></p>
+                </section>
+                <section>
+                    <h2><small>4. <a href="http://vuejs.org/">Vue.js</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- HTML Checkbox -->
+<input type="checkbox" v-model="hideEventsWithMeals" /> <label>Hide Events with Meals</label>
+
+<table>
+<!-- HTML for loop -->
+<tr v-for="event in myEvents" v-if="!(hideEventsWithMeals && event.hasMeal)">
+        <td>
+            <span>{{event.name}}</span>
+        </td>
+        <td>
+            <span>{{event.description}}</span>
+        </td>
+        <td v-bind:class="{'bg-danger': event.pastDate, 'text-danger': event.pastDate}">
+            <span>{{event.date}}</span>
+        </td>
+        <td>
+            <span>{{event.location}}</span>
+        </td>
+        <td>
+            <span>{{event.hasMeal}}</span>
+        </td>
+        <td>
+            <span>{{event.mealDescription}}</span>
+        </td>
+        <td>
+            <span>{{event.startTime}}</span>
+        </td>
+        <td>
+            <span>{{event.endTime}}</span>
+        </td>
+        <td>
+            <a href="/Admin/Details/{{event.id}}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+        </td>
+    </tr>
+
+</table>
+					</code></pre></small>
+                </section>
+                <section>
+                    <h2><small>4. <a href="http://vuejs.org/">Vue.js</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+// JS Controller, Component, or ViewModel Bits
+new Vue({
+    el: '#myEvents',
+    data: {
+        hideEventsWithMeals: false,
+        firstName: "Eric",
+        lastName: "Johnson",
+        myEvents: []
+    },
+    methods: {
+        alert: function () {
+            alert("Hello, I'm " + this.firstName + " " + this.lastName + ", the stuff!");
+        },
+
+        addEvent: function (event) {
+            this.myEvents.push(
+                {
+                    id: event.Id,
+                    //urlId: '/Admin/Details/' + event.Id, not needed
+                    name: event.Name,
+                    description: event.Description,
+                    location: event.Location,
+                    date: event.Date,
+                    startTime: event.StartTime,
+                    endTime: event.EndTime,
+                    hasMeal: event.HasMeal,
+                    mealDescription: event.MealDescription,
+                    pastDate: new Date(event.Date) < new Date()
+                })
+            console.log('event=', event);
+        },
+
+        findMyEvents: function () {
+
+            var that = this;
+            //clear old events
+            that.myEvents = [];
+
+            $.ajax({
+                url: '@Url.Action("MyEventsAPI", "Home")',
+                dataType: 'json',
+                method: 'GET',
+                async: false,
+                data: { firstName: this.firstName, lastName: this.lastName },
+                success: function (data) {
+                    var responseData = jQuery.parseJSON(data);
+
+                    for (i = 0; i < responseData.length; i++) {
+                        //console.log('for loop', i, responseData[i]);
+                        that.addEvent(responseData[i]);
+                    }
+                }
+            });
+
+        }
+    }
+});
+					</code></pre></small>
+                </section>
+            </section>
+
+            <!-- --------------------- START VERTICAL KNOCKOUT WITH COMPONENTS SECTION -------------------------- -->
+            <section data-transition="zoom">
+                <section>
+                    <h1><small>5. <a href="http://knockoutjs.com/documentation/component-overview.html">Knockout with Components</a></small></h1>
+
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- No Knockout app container needed-->
+<!-- HTML Form Template-->
+<form data-bind="submit: myModel.findMyEvents"> 
+
+<div class="row form-group">
+    <div class="col-md-6">
+        <label> First Name *</label>
+        <!-- Notice specific model scope "myModel." -->
+        <input class="form-control text-box single-line" data-bind="value: myModel.firstName">
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-6">
+        <label> Last Name *</label>
+        <input class="form-control text-box single-line" data-bind="value: myModel.lastName">
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-6">
+        <div class="col-md-offset-2">
+            <button type="submit" class="btn btn-maroon">
+                Find My Registrations
+            </button>
+        </div>
+    </div>
+</div>
+
+</form>
+					</code></pre></small>
+                    <p><code><small>Hold down <strong>Alt</strong> and <em>click</em> to zoom in and out on the slide</small></code></p>
+                </section>
+                <section>
+                    <h2><small>5. <a href="http://knockoutjs.com/documentation/component-overview.html">Knockout with Components</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- custom tag for placement of component -->
+<results-table params="results: myModel.myEvents"></results-table>
+
+
+<!-- This code for the component could be in a seperate file.-->
+<template id="results-table-template">
+    <!-- HTML Checkbox -->
+    <input type="checkbox" data-bind="checked: hideEventsWithMeals" />
+
+    <table>
+    <!-- HTML for loop -->
+    <tbody data-bind="foreach: {data: myEvents, as: 'event' }">
+        <tr data-bind="if: !(myModel.hideEventsWithMeals() && event.hasMeal)">
+            <td>
+                <span data-bind="text: event.name"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.description"></span>
+            </td>
+            <td data-bind="css : {'bg-danger' : event.pastDate, 'text-danger' :  event.pastDate}">
+                <span data-bind="text: event.date"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.location"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.hasMeal"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.mealDescription"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.startTime"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.endTime"></span>
+            </td>
+            <td>
+                <span data-bind="text: event.pastDate"></span>
+                <a data-bind="attr: {href: event.urlId}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</template>
+					</code></pre></small>
+                </section>
+                <section>
+                    <h2><small>5. <a href="http://knockoutjs.com/documentation/component-overview.html">Knockout with Components</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+// JS Controller, Component, or ViewModel Bits
+var myModel = new function () {
+    var self = this;
+    self.firstName = ko.observable("Eric");
+    self.lastName = ko.observable("Johnson");
+    self.myEvents = ko.observableArray([]);
+
+    self.addEvent = function (event) {
+        self.myEvents.push(
+            {
+                id: event.Id,
+                urlId: '/Admin/Details/' + event.Id,
+                name: event.Name,
+                description: event.Description,
+                location: event.Location,
+                date: event.Date,
+                startTime: event.StartTime,
+                endTime: event.EndTime,
+                hasMeal: event.HasMeal,
+                mealDescription: event.MealDescription
+            })
+        console.log('event=', event);
+    }
+
+    self.alert = function () {
+        alert("Hello, I'm " + self.firstName() + " " + self.lastName() + ", the stuff!");
+    };
+    self.findMyEvents = function () {
+
+        var that = self;
+        //clear old events
+        that.myEvents([]);
+
+        $.ajax({
+            url: '@Url.Action("MyEventsAPI", "Home")',
+            dataType: 'json',
+            method: 'GET',
+            async: false,
+            data: { firstName: self.firstName(), lastName: self.lastName() },
+            success: function (data) {
+                var responseData = jQuery.parseJSON(data);
+
+                for (i = 0; i < responseData.length; i++) {
+                    //console.log('for loop', i, responseData[i]);
+                    that.addEvent(responseData[i]);
+                }
+            }
+        });
+    }
+};
+
+var resultsModel = function (params) {
+    var self = this;
+
+    self.hideEventsWithMeals = ko.observable(false);
+    self.results = params.results;
+    // The current item will be passed as the first parameter, so we know which event.id we have
+    self.viewDetails = function (event) {
+        window.location.replace("/Admin/Details/" + event.id);
+    }
+}
+ko.components.register('results-table', {
+    template: { element: 'results-table-template' },
+    viewModel: resultsModel
+});
+
+var overallViewModel = {
+    myModel: myModel,
+    resultsModel: new resultsModel(myModel.myEvents)
+};
+
+ko.applyBindings(overallViewModel);
+					</code></pre></small>
+                </section>
+            </section>
+
+            <!-- --------------------- START VERTICAL EMBER WITH COMPONENTS SECTION -------------------------- -->
+            <section data-transition="zoom">
+                <section>
+                    <h1><small>6. <a href="https://guides.emberjs.com/v2.3.0/components/defining-a-component/">Ember with Components</a></small></h1>
+
+                    <small><pre><code class="hljs" data-trim contenteditable>
+
+<div id="myEvents">
+    <!--<script type="text/x-handlebars">-->
+    <!-- this is the functional app container component-->
+        {{my-events}} <!-- this references "components/my-events" below -->
+    <!--</script>-->
+    <!-- this Script could be in its own handlebars template file -->
+    <!-- script type="text/x-handlebars" data-template-name="components/my-events"> -->
+
+        <form {{action 'findMyEvents'}}>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label> First Name *</label>
+                    {{input class="form-control text-box single-line" value=firstName placeholder="first"}}
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label> Last Name *</label>
+                    {{input class="form-control text-box single-line" value=lastName placeholder="last"}}
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <div class="col-md-offset-2">
+                        <button type="submit" class="btn btn-maroon">
+                            Find My Registrations
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <!-- </script> -->
+</div>
+					</code></pre></small>
+                    <p><code><small>Hold down <strong>Alt</strong> and <em>click</em> to zoom in and out on the slide</small></code></p>
+                </section>
+                <section>
+                    <h2><small>6. <a href="https://guides.emberjs.com/v2.3.0/components/defining-a-component/">Ember with Components</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+<!-- Here "myEvents"" are passed into this components "results" field
+      with one-way data-binding! Components are reusable,  and fast because of this.
+{{results-table results=myEvents}} -->
+
+<!-- </script>  -->
+
+<!-- This could be in a seperate file.-->
+<!-- <script type="text/x-handlebars" data-template-name="components/results-table"> -->
+
+<!-- HTML checkbox -->  
+{{input type="checkbox" name="hideEventsWithMeals" checked=hideEventsWithMeals}} <label>Hide Events with Meals</label>
+
+<table>
+<!-- HTML for loop -->
+    <tbody>
+        <!-- {{#if hideEventsWithMeals}} These HTMLBar sections aren't commented out in the actual code, -->
+        <!-- {{#each myEventsWithoutMeals as |event| }} syntax highlighter just is getting confused --> 
+        <tr>
+            <td>
+                <span>{{event.name}}</span>
+            </td>
+            <td>
+                <span>{{event.description}}</span>
+            </td>
+            <!--
+            <td class={{if event.pastDate "bg-danger text-danger"}}>
+                <span>{{event.date}}</span>
+            </td> -->
+            <td>
+                <span>{{event.location}}</span>
+            </td>
+            <td>
+                <span>{{event.hasMeal}}</span>
+            </td>
+            <td>
+                <span>{{event.mealDescription}}</span>
+            </td>
+            <td>
+                <span>{{event.startTime}}</span>
+            </td>
+            <td>
+                <span>{{event.endTime}}</span>
+            </td>
+            <td>
+                <a href="/Admin/Details/{{event.id}}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+            </td>
+        </tr>
+        <!-- {{/each}} -->
+        <!-- {{else}} -->
+        <!-- {{#each myEvents as |event| }} -->
+        <tr>
+            <td>
+                <span>{{event.name}}</span>
+            </td>
+            <td>
+                <span>{{event.description}}</span>
+            </td>
+            <!--  This section isn't commented out in the actual code, 
+                   but the HTMLBars highlighter is getting confused
+            <td class={{if event.pastDate "bg-danger text-danger"}}>
+                <span>{{event.date}}</span>
+            </td> -->
+            <td>
+                <span>{{event.location}}</span>
+            </td>
+            <td>
+                <span>{{event.hasMeal}}</span>
+            </td>
+            <td>
+                <span>{{event.mealDescription}}</span>
+            </td>
+            <td>
+                <span>{{event.startTime}}</span>
+            </td>
+            <td>
+                <span>{{event.endTime}}</span>
+            </td>
+            <td>
+                <a href="/Admin/Details/{{event.id}}" class="btn btn-info"><i class="icon-cmich-microscope"></i></a>
+            </td>
+        </tr>
+        <!-- {{/each}} -->
+        <!-- {{/if}} -->
+
+    </tbody>
+</table>
+					</code></pre></small>
+                </section>
+                <section>
+                    <h2><small>6. <a href="https://guides.emberjs.com/v2.3.0/components/defining-a-component/">Ember with Components</a></small></h2>
+                    <small><pre><code class="hljs" data-trim contenteditable>
+var myEventsApp = Ember.Application.create({
+    rootElement: '#myEvents',
+});
+
+myEventsApp.MyEventsComponent = Ember.Component.extend({
+    firstName: "Eric",
+    lastName: "Johnson",
+    myEvents: [],
+
+    actions: {
+        alert: function () {
+            alert("Hello, I'm " + this.get('firstName') + " " + this.get('lastName') + ", the stuff!");
+        },
+        addEvent: function (event) {
+            this.myEvents.push(
+                {
+                    id: event.Id,
+                    //urlId: '/Admin/Details/' + event.Id, not needed
+                    name: event.Name,
+                    description: event.Description,
+                    location: event.Location,
+                    date: event.Date,
+                    startTime: event.StartTime,
+                    endTime: event.EndTime,
+                    hasMeal: event.HasMeal,
+                    mealDescription: event.MealDescription,
+                    pastDate: new Date(event.Date) < new Date()
+                })
+            console.log('event=', event);
+        },
+        findMyEvents: function () {
+
+            var that = this;
+            //clear old events
+            that.set('myEvents', []);
+
+            $.ajax({
+                url: '@Url.Action("MyEventsAPI", "Home")',
+                dataType: 'json',
+                method: 'GET',
+                async: false,
+                data: { firstName: that.get('firstName'), lastName: that.get('lastName') },
+                success: function (data) {
+                    var responseData = jQuery.parseJSON(data);
+
+                    for (i = 0; i < responseData.length; i++) {
+                        //console.log('for loop', i, responseData[i]);
+                        that.send('addEvent', responseData[i]);
+                    }
+                }
+            });
+        }
+    }
+});
+
+myEventsApp.ResultsTableComponent = Ember.Component.extend({
+    ResultsTableComponent: [],
+    hideEventsWithMeals: false,
+    myEventsWithoutMeals: Ember.computed.filterBy('results', 'hasMeal', false),
+
+    actions: {
+        viewDetails: function (eventId) {
+            window.location.replace("/Admin/Details/" + eventId);
+        }
+    }
+});
+					</code></pre></small>
+                </section>
+            </section>
+
+
+            <section id="transitions">
+                <h2>Transition Styles</h2>
+                <p>
+                    You can select from different transitions, like:
+                    <br>
+                    <a href="?transition=none#/transitions">None</a> -
+                    <a href="?transition=fade#/transitions">Fade</a> -
+                    <a href="?transition=slide#/transitions">Slide</a> -
+                    <a href="?transition=convex#/transitions">Convex</a> -
+                    <a href="?transition=concave#/transitions">Concave</a> -
+                    <a href="?transition=zoom#/transitions">Zoom</a>
+                </p>
+            </section>
+
+            <section>
+                <section data-background="#dddddd">
+                    <h2>Slide Backgrounds</h2>
+                    <p>
+                        Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color
+                        formats are supported.
+                    </p>
+                    <a href="#" class="navigate-down">
+                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+                    </a>
+                </section>
+                <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+                    <h2>Image Backgrounds</h2>
+                    <pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+                </section>
+                <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat"
+                data-background-size="100px">
+                    <h2>Tiled Backgrounds</h2>
+                    <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+                </section>
+                <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm"
+                data-background-color="#000000">
+                    <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <h2>Video Backgrounds</h2>
+                        <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+                    </div>
+                </section>
+                <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+                    <h2>... and GIFs!</h2>
+                </section>
+            </section>
+
+            <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+                <h2>Background Transitions</h2>
+                <p>
+                    Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+                </p>
+                <pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+            </section>
+
+            <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+                <h2>Background Transitions</h2>
+                <p>
+                    You can override background transitions per-slide.
+                </p>
+                <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+            </section>
+
+            <section>
+                <h2>Pretty Code</h2>
+                <pre><code class="hljs" data-trim contenteditable>
 function linkify( selector ) {
   if( supports3DTransforms ) {
 
@@ -239,152 +1143,158 @@ function linkify( selector ) {
     }
   }
 }
+
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+                <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+            </section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+            <section>
+                <h2>Marvelous List</h2>
+                <ul>
+                    <li>No order here</li>
+                    <li>Or here</li>
+                    <li>Or here</li>
+                    <li>Or here</li>
+                </ul>
+            </section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+            <section>
+                <h2>Fantastic Ordered List</h2>
+                <ol>
+                    <li>One is smaller than...</li>
+                    <li>Two is smaller than...</li>
+                    <li>Three!</li>
+                </ol>
+            </section>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
+            <section>
+                <h2>Tabular Tables</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Value</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apples</td>
+                            <td>$1</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Lemonade</td>
+                            <td>$2</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Bread</td>
+                            <td>$3</td>
+                            <td>2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            <section>
+                <h2>Clever Quotes</h2>
+                <p>
+                    These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
 						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+                </p>
+                <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+                    &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce
+                    the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+                </blockquote>
+            </section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+            <section>
+                <h2>Intergalactic Interconnections</h2>
+                <p>
+                    You can link between slides internally,
+                    <a href="#/2/3">like this</a>.
+                </p>
+            </section>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+            <section>
+                <h2>Speaker View</h2>
+                <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer,
+                    preview of the upcoming slide as well as your speaker notes.</p>
+                <p>Press the <em>S</em> key to try it out.</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+                <aside class="notes">
+                    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes
+                    window (hit 's' on your keyboard).
+                </aside>
+            </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+            <section>
+                <h2>Export to PDF</h2>
+                <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's
+                    an example:</p>
+                <iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0"
+                marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+                </iframe>
+            </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+            <section>
+                <h2>Global State</h2>
+                <p>
+                    Set <code>data-state="something"</code> on a slide and <code>"something"</code> will be added as a class
+                    to the document element when the slide is open. This lets you apply broader style changes, like switching
+                    the page background.
+                </p>
+            </section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+            <section data-state="customevent">
+                <h2>State Events</h2>
+                <p>
+                    Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code>                    name.
+                </p>
+                <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
 Reveal.addEventListener( 'customevent', function() {
 	console.log( '"customevent" has fired' );
 } );
 					</code></pre>
-				</section>
+            </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+            <section>
+                <h2>Take a Moment</h2>
+                <p>
+                    Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting
+                    slides off the screen.
+                </p>
+            </section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+            <section>
+                <h2>Much more</h2>
+                <ul>
+                    <li>Right-to-left support</li>
+                    <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+                    <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+                    <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+                    <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+                </ul>
+            </section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+            <section style="text-align: left;">
+                <h1>THE END</h1>
+                <p>
+                    - <a href="http://slides.com">Try the online editor</a>
+                    <br> - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+                </p>
+            </section>
 
-			</div>
+        </div>
 
-		</div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-
-			// Full list of configuration options available at:
+    <script>
+        // Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
@@ -392,8 +1302,10 @@ Reveal.addEventListener( 'customevent', function() {
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
+				transition: 'linear', // none/fade/slide/convex/concave/zoom
+                parallaxBackgroundImage: 'assets/js-mvc-smackdown.jpg',
+                parallaxBackgroundSize: '4191px 2358px',
+                
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -404,8 +1316,8 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+    </script>
 
-		</script>
+</body>
 
-	</body>
 </html>
