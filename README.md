@@ -5,7 +5,7 @@
 ## Overview
 This presentation was created to 
 - See how Knockout compared with other modern MC* Frameworks
-- Have a place to display the content in GitHib Pages [http://ericop.github.io/js-mvc-presentation](http://ericop.github.io/js-mvc-presentation)
+- Have a place to display the content in GitHib Pages [ericop.github.io/js-mvc-presentation](http://ericop.github.io/js-mvc-presentation)
 
 > The below **Installation Instructions** are from the original README.
 
