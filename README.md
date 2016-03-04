@@ -1,5 +1,5 @@
 # JS MVC SMackdown Presentation
-##  A practical look JS MV* Frameworks: Angular 1.5, Ember, VueJS vs. Knockout (with or without [components](https://www.w3.org/wiki/WebComponents/)
+##  A practical look JS MV* Frameworks: Angular 1.5, Ember, VueJS vs. Knockout (with or without [components](https://www.w3.org/wiki/WebComponents/))
 
 
 ## Overview
@@ -7,7 +7,7 @@ This presentation was created to
 - See how Knockout compared with other modern MC* Frameworks
 - Have a place to display the content in GitHib Pages [http://ericop.github.io/js-mvc-presentation](http://ericop.github.io/js-mvc-presentation)
 
-> The below is from the original README.
+> The below **Installation Instructions** are from the original README.
 
 ## Installation
 
