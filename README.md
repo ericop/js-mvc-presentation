@@ -1,5 +1,5 @@
 # JS MVC Smackdown Presentation
-##  A practical look JS MV* Frameworks: Angular 1.5, Ember, VueJS vs. Knockout (with or without [components](https://www.w3.org/wiki/WebComponents/))
+##  A practical look at JS MV* Frameworks: Angular 1.5, Ember, VueJS vs. Knockout (with or without [components](https://www.w3.org/wiki/WebComponents/))
 
 
 ## Overview
